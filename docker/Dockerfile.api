@@ -5,10 +5,13 @@ WORKDIR /app
 COPY package.json bun.lock bunfig.toml tsconfig.base.json ./
 COPY packages ./packages
 COPY apps ./apps
+COPY scripts ./scripts
 
 RUN bun install --frozen-lockfile
 RUN bun run --filter './apps/api' build
 
-EXPOSE 3000
+RUN chmod +x scripts/start-api.sh
 
-CMD ["bun", "apps/api/dist/index.js"]
+EXPOSE 8088
+
+CMD ["sh", "scripts/start-api.sh"]
