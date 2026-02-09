@@ -18,7 +18,7 @@ services:
   redis:
     image: redis:7-alpine
     ports:
-      - "6379:6379"
+      - "6380:6380"
     volumes:
       - redisdata:/data
     healthcheck:
@@ -37,7 +37,7 @@ services:
       PORT: "3000"
       DATABASE_URL: postgres://postgres:postgres@postgres:5432/onyx
       REDIS_HOST: redis
-      REDIS_PORT: "6379"
+      REDIS_PORT: "6380"
       OLLAMA_URL: http://host.docker.internal:11434
       BETTER_AUTH_URL: http://localhost:3000
       BETTER_AUTH_SECRET: change-me
@@ -54,7 +54,7 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:postgres@postgres:5432/onyx
       REDIS_HOST: redis
-      REDIS_PORT: "6379"
+      REDIS_PORT: "6380"
       OLLAMA_URL: http://host.docker.internal:11434
     depends_on:
       postgres:
