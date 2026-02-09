@@ -15,6 +15,7 @@ export const auth = betterAuth({
   }),
   emailAndPassword: {
     enabled: true,
+    requireEmailVerification: false,
   },
   baseURL:
     process.env.BETTER_AUTH_URL ||

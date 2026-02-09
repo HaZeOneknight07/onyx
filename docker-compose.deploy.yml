@@ -68,8 +68,6 @@ services:
       dockerfile: docker/Dockerfile.web
     ports:
       - "5173:80"
-    environment:
-      VITE_AUTH_BASE_URL: https://api-onyx.ashmorestudios.com
 
 volumes:
   pgdata:
