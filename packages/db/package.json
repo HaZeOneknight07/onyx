@@ -1,0 +1,25 @@
+{
+  "name": "@onyx/db",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema/index.ts"
+  },
+  "scripts": {
+    "generate": "drizzle-kit generate",
+    "migrate": "bun --env-file=../../.env drizzle-kit migrate",
+    "push": "bun --env-file=../../.env drizzle-kit push",
+    "seed": "bun --env-file=../../.env run src/seed.ts",
+    "studio": "bun --env-file=../../.env drizzle-kit studio"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.0",
+    "postgres": "^3.4.0",
+    "pgvector": "^0.2.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.0",
+    "typescript": "^5.7.0",
+    "@types/bun": "latest"
+  }
+}

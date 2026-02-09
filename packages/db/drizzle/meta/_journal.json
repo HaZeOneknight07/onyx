@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1770491607526,
+      "tag": "0000_shallow_toad",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1770570200000,
+      "tag": "0001_allow_null_api_token_project_id",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1770571800000,
+      "tag": "0002_change_embedding_dim_to_768",
+      "breakpoints": true
+    }
+  ]
+}

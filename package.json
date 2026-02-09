@@ -1,0 +1,30 @@
+{
+  "name": "agent-information-store",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun run --filter './apps/*' dev",
+    "dev:api": "bun run --filter './apps/api' dev",
+    "dev:worker": "bun run --filter './apps/worker' dev",
+    "dev:mcp": "bun run --filter './apps/mcp' dev",
+    "dev:web": "bun run --filter './apps/web' dev",
+    "build": "bun run --filter '*' build",
+    "lint": "bun run --filter '*' lint",
+    "test": "bun test",
+    "test:unit": "bun test --filter 'unit'",
+    "test:integration": "bun test --filter 'integration'",
+    "test:e2e": "bun test --filter 'e2e'",
+    "db:generate": "bun run --filter './packages/db' generate",
+    "db:migrate": "bun run --filter './packages/db' migrate",
+    "db:push": "bun run --filter './packages/db' push",
+    "db:seed": "bun run --filter './packages/db' seed",
+    "db:studio": "bun run --filter './packages/db' studio",
+    "db:backup": "scripts/db-backup.sh",
+    "db:restore": "scripts/db-restore.sh",
+    "app:full": "bun run scripts/app-full.ts",
+    "perf:test": "bun run scripts/perf-test.ts"
+  }
+}

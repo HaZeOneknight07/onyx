@@ -1,0 +1,11 @@
+node_modules
+**/node_modules
+bun.lockb
+.env
+.env.*
+backups
+.DS_Store
+.git
+.gitignore
+.vscode
+.idea

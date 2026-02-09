@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "llm-info-store": {
+      "type": "stdio",
+      "command": "bun",
+      "args": ["--env-file", ".env", "apps/mcp/src/index.ts"],
+      "cwd": "/Users/ty/Desktop/agent-information-store"
+    }
+  }
+}
