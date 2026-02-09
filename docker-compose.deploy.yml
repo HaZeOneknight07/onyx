@@ -67,9 +67,9 @@ services:
       context: .
       dockerfile: docker/Dockerfile.web
     ports:
-      - "8088:8088"
+      - "5173:80"
     environment:
-      VITE_AUTH_BASE_URL: http://localhost:8088
+      VITE_AUTH_BASE_URL: https://api-onyx.ashmorestudios.com
 
 volumes:
   pgdata:
