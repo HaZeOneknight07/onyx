@@ -8,7 +8,7 @@ import { registerDocumentTools } from "./tools/documents";
 import { registerTaskTools } from "./tools/tasks";
 import { registerSessionTools } from "./tools/sessions";
 
-const apiUrl = process.env.ONYX_API_URL ?? "http://localhost:3000";
+const apiUrl = process.env.ONYX_API_URL ?? "http://localhost:8088";
 const apiToken = process.env.ONYX_API_TOKEN;
 
 if (!apiToken) {
@@ -18,7 +18,7 @@ if (!apiToken) {
 
 const client = new OnyxClient({ baseUrl: apiUrl, token: apiToken });
 const server = new McpServer({
-  name: "ais",
+  name: "onyx",
   version: "0.1.0",
 });
 

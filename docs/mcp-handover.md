@@ -14,7 +14,7 @@ Example `~/.codex/config.toml`:
 [mcp_servers.onyx]
 command = "bun"
 args = ["--env-file", "../../.env", "run", "src/index.ts"]
-env = { ONYX_API_TOKEN = "YOUR_TOKEN", ONYX_API_URL = "https://onyx.ashmorestudios.com" }
+env = { ONYX_API_TOKEN = "YOUR_TOKEN", ONYX_API_URL = "https://api-onyx.ashmorestudios.com" }
 cwd = "/Users/ty/Desktop/agent-information-store/apps/mcp"
 startup_timeout_sec = 20
 ```

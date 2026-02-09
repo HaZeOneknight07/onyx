@@ -40,14 +40,14 @@ Create `.env` (see `.env.example`). Required values:
 | `REDIS_HOST` | Redis host (worker) | `localhost` |
 | `REDIS_PORT` | Redis port (worker) | `6379` |
 | `OLLAMA_URL` | Embedding service | `http://localhost:11434` |
-| `BETTER_AUTH_URL` | Auth base URL | `http://localhost:3000` |
+| `BETTER_AUTH_URL` | Auth base URL | `http://localhost:8088` |
 | `BETTER_AUTH_SECRET` | Auth secret | none |
 
 For the MCP server:
 
 | Variable | Description | Default |
 | --- | --- | --- |
-| `ONYX_API_URL` | API base URL | `http://localhost:3000` |
+| `ONYX_API_URL` | API base URL | `http://localhost:8088` |
 | `ONYX_API_TOKEN` | API token for MCP | none |
 
 ### Global Admin API Tokens
@@ -58,7 +58,7 @@ This token is not scoped to a single project and can create new projects.
 Example:
 
 ```sh
-curl -X POST http://localhost:3000/api/v1/tokens \
+curl -X POST http://localhost:8088/api/v1/tokens \
   -H "Authorization: Bearer <SESSION_OR_TOKEN>" \
   -H "Content-Type: application/json" \
   -d '{"name":"global-admin","expiresAt":"2026-03-01T00:00:00Z"}'
@@ -123,7 +123,7 @@ The MCP server exposes tools for projects (including create/update/delete), docs
 [mcp_servers.onyx]
 command = "bun"
 args = ["--env-file", "../../.env", "run", "src/index.ts"]
-env = { ONYX_API_TOKEN = "YOUR_TOKEN", ONYX_API_URL = "https://onyx.ashmorestudios.com" }
+env = { ONYX_API_TOKEN = "YOUR_TOKEN", ONYX_API_URL = "https://api-onyx.ashmorestudios.com" }
 cwd = "/ABSOLUTE/PATH/TO/apps/mcp"
 startup_timeout_sec = 20
 ```

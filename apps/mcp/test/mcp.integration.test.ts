@@ -22,7 +22,7 @@ type ListDocsResult = Array<unknown>;
 type ListTasksResult = Array<unknown>;
 
 const ONYX_API_TOKEN = process.env.ONYX_API_TOKEN;
-const ONYX_API_URL = process.env.ONYX_API_URL ?? "http://localhost:3000";
+const ONYX_API_URL = process.env.ONYX_API_URL ?? "http://localhost:8088";
 const HAS_ENV = Boolean(ONYX_API_TOKEN);
 
 const TEST_TIMEOUT_MS = 20_000;

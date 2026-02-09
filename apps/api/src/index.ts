@@ -1,7 +1,7 @@
 import app from "./app";
 import { logger } from "@onyx/shared";
 
-const port = parseInt(process.env.PORT || "3000");
+const port = parseInt(process.env.PORT || "8088");
 
 logger.info({ port }, "Starting API server");
 

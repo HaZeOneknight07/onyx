@@ -13,7 +13,7 @@ The script will:
 ## Run
 
 ```sh
-ONYX_API_URL=https://onyx.ashmorestudios.com \
+ONYX_API_URL=https://api-onyx.ashmorestudios.com \
 ONYX_API_TOKEN=YOUR_TOKEN \
 bun run perf:test
 ```
